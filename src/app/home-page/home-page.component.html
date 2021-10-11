@@ -1,0 +1,14 @@
+<html>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly&channel=2"
+      async
+    ></script>
+    <body>
+        <div id="mainContainer">
+            <div id="orderCashButton" (click) = "validateRequest()">
+                <p id="orderBtnText">Order Cash from your nearest ATM</p>
+            </div>
+            <button mat-raised-button style="margin: 0 auto; display: block; margin-top: 20px;" (click) = "gotoAdminScreen()">Admin</button>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,20 @@
+#orderCashButton{
+    height: 100px;
+    width: 1000px;
+    background-color: #77D970;
+    border-radius: 10px;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    margin-top: 50vh;
+    cursor: pointer;
+    box-shadow: black;
+}
+
+#orderBtnText{
+    text-align: center;
+    padding-top: 40px;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: large;
+}

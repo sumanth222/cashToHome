@@ -1,0 +1,30 @@
+<html>
+    <body>
+        <div id = "mainContainer">
+            <h2 class="addressHeader">Fill in your address</h2>
+            <form id="addressForm">
+                <mat-form-field class="full-width" appearance="fill">
+                    <mat-label>Colony / Street</mat-label>
+                    <input matInput placeholder="Ex. XYZ Colony" width="500" [(ngModel)] = "colony" [ngModelOptions]="{standalone: true}">
+                  </mat-form-field>                   
+
+              <mat-form-field class="full-width" appearance="fill">
+                <mat-label>Locality</mat-label>
+                <input matInput placeholder="Ex. Dilsukhnagar/ LB Nagar .." width="500" [(ngModel)] = "locality" [ngModelOptions]="{standalone: true}">
+              </mat-form-field>                   
+
+          <mat-form-field class="full-width" appearance="fill">
+            <mat-label>House no, Road number</mat-label>
+            <input matInput width="500" [(ngModel)] = "hno" [ngModelOptions]="{standalone: true}">
+          </mat-form-field>      
+          
+          <mat-form-field class="full-width" appearance="fill">
+            <mat-label>PinCode</mat-label>
+            <input matInput width="500" [(ngModel)] = "pincode" [ngModelOptions]="{standalone: true}">
+          </mat-form-field>    
+          
+          <button mat-raised-button style="margin:20px" (click) = "addressFilled()">Proceed</button>
+        </form>
+        </div>
+    </body>
+</html>
