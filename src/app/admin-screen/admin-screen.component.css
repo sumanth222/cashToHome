@@ -1,0 +1,16 @@
+#headerCol{
+    height: 500px;
+    width: 50px;
+    background-color: red;
+    display: inline-block;
+}
+
+#list{
+    display: inline-block;
+    height: 500px;
+    width: 1000px
+}
+
+#mainContainer{
+    padding-left : 10rem
+}

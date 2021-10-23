@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { AdminScreenComponent } from '../admin-screen/admin-screen.component';
 
 @Component({
   selector: 'app-wait-screen',
@@ -14,6 +15,13 @@ export class WaitScreenComponent implements OnInit {
   constructor(private httpClient : HttpClient) { }
 
   ngOnInit(): void {
+    const channel = new BroadcastChannel('app-data');
+    channel.addEventListener ('message', (event) => {
+    console.log(event.data);
+  });
   }
 
+  dataReceived(){
+    console.log("Data received")
+  }
 }

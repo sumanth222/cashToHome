@@ -1,10 +1,90 @@
-<mat-grid-list cols="4" rowHeight="100px">
+<div id = "mainContainer">
 
-    <mat-grid-tile
-        *ngFor="let header of headers"
-        [colspan]="1"
-        [rowspan]="1">
-      <strong>{{header}}</strong>
-    </mat-grid-tile>
+<div id = "list">
+  <mat-grid-list cols={{cols}} rowHeight="100px">  
+    
+      <mat-grid-tile
+          [colspan]="1"
+          [rowspan]="1">
+          <span><strong>ID</strong></span>
+      </mat-grid-tile>
 
-  </mat-grid-list>
+      <mat-grid-tile
+          *ngFor="let address of allDetails"
+          [colspan]="1"
+          [rowspan]="1">
+          <span>{{address.id}}</span>
+      </mat-grid-tile>
+
+      <mat-grid-tile
+          [colspan]="1"
+          [rowspan]="1">
+          <span><strong>Username</strong></span>
+      </mat-grid-tile>
+
+      <mat-grid-tile
+          *ngFor="let address of allDetails"
+          [colspan]="1"
+          [rowspan]="1">
+          <span>{{address.userName}}</span>
+      </mat-grid-tile>
+
+      <mat-grid-tile
+          [colspan]="1"
+          [rowspan]="1">
+          <span><strong>Latitude</strong></span>
+      </mat-grid-tile>
+
+      <mat-grid-tile
+          *ngFor="let address of allDetails"
+          [colspan]="1"
+          [rowspan]="1">
+          <span>{{address.lat}}</span>
+      </mat-grid-tile>
+
+      <mat-grid-tile
+          [colspan]="1"
+          [rowspan]="1">
+          <span><strong>Longitude</strong></span>
+      </mat-grid-tile>
+
+      <mat-grid-tile
+          *ngFor="let address of allDetails"
+          [colspan]="1"
+          [rowspan]="1">
+          <span>{{address.lng}}</span>
+      </mat-grid-tile>
+
+      <mat-grid-tile
+          [colspan]="1"
+          [rowspan]="1">
+          <span><strong>Address</strong></span>
+      </mat-grid-tile>
+
+      <mat-grid-tile
+          *ngFor="let address of allDetails"
+          [colspan]="1"
+          [rowspan]="1">
+          <span>{{address.address}}</span>
+      </mat-grid-tile>
+
+      <mat-grid-tile
+          [colspan]="1"
+          [rowspan]="1">
+          <span><strong>Action</strong></span>
+      </mat-grid-tile>
+
+      <mat-grid-tile
+          *ngFor="let address of allDetails;"
+          [colspan]="1"
+          [rowspan]="1">
+          <button (click)="updateRequest(address.id)" style="width: 80px;padding: 5px;background-color: chartreuse;margin-left : 30px;"><strong>Accept</strong></button>
+
+          <button style="width: 80px;padding: 5px;margin-left: 5px;background-color: crimson;margin-right: 30px;"><strong>Reject</strong></button>
+      </mat-grid-tile>
+
+    </mat-grid-list>
+
+  </div>
+
+</div>
